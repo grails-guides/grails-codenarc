@@ -4,5 +4,7 @@ gettingStarted:
   howto: How to complete the guide
 writingTheApp:
   title: Writing the Application
+  ruleTypes: Rule Types
+  addingCodenarc: Adding CodeNarc to our project
 runningTheApp:
   title: Running the Application

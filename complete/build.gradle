@@ -20,6 +20,10 @@ apply plugin:"org.grails.grails-web"
 apply plugin:"org.grails.grails-gsp"
 apply plugin:"asset-pipeline"
 
+// tag::applyCodenarc[]
+apply plugin: 'codenarc' // <1>
+// end::applyCodenarc[]
+
 repositories {
     mavenLocal()
     maven { url "https://repo.grails.org/grails/core" }
@@ -58,3 +62,11 @@ assets {
     minifyJs = true
     minifyCss = true
 }
+
+// tag::codenarcTask[]
+codenarc {
+    toolVersion = '0.27.0' // <2>
+    configFile = file("${project.projectDir}/config/codenarc/rules.groovy") // <3>
+    reportFormat = 'html' // <4>
+}
+// end::codenarcTask[]
