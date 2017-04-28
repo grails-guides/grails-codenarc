@@ -1,4 +1,4 @@
-package grails.codenarc
+package demo
 
 class UrlMappings {
 

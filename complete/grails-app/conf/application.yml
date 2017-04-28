@@ -2,7 +2,7 @@
 grails:
     profile: web
     codegen:
-        defaultPackage: grails.codenarc
+        defaultPackage: demo
     spring:
         transactionManagement:
             proxies: false
