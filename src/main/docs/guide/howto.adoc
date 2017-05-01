@@ -1,1 +1,13 @@
 include::{commondir}/common-howto.adoc[]
+
+Alternatively, if you already have Grails {grailsVersion} installed then you can create a new application using the
+following command in a Terminal window:
+
+[source,bash]
+----
+$ grails create-app grails-codenarc
+$ cd grails-codenarc
+----
+
+When the `create-app` command completes, Grails will create a `grails-codenarc` directory with an application
+configured to create a WEB application.
