@@ -66,7 +66,8 @@ assets {
 // tag::codenarcTask[]
 codenarc {
     toolVersion = '0.27.0' // <2>
-    configFile = file("${project.projectDir}/config/codenarc/rules.groovy") // <3>
+    configFile = file("${projectDir}/src/codenarc/rules.groovy") // <3>
     reportFormat = 'html' // <4>
+    ignoreFailures = true // <5>
 }
 // end::codenarcTask[]
