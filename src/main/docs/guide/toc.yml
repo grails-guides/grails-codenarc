@@ -7,5 +7,5 @@ writingTheApp:
   ruleTypes: Rule Types
   addingCodenarc: Adding CodeNarc to our project
   finalConfiguration: Final configuration
-runningTheApp:
-  title: Running the Application
+writingCustomRule:
+  title: Writing a custom Rule

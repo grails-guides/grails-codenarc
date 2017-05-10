@@ -1,0 +1,11 @@
+
+Although CodeNarc provides some http://codenarc.sourceforge.net/codenarc-rules-grails.html[rules] specific for Grails,
+some times we may want to create our own rules.
+
+In this example we're going to create a rule to check that we use `@grails.transaction.Transactional` instead of
+`@org.springframework.transaction.annotation.Transactional`. As you probably know the Grails `@Transactional` annotation
+is better because it doesn't create a runtime proxy because it's just an AST Transformation that it's applied during
+compilation time, so there's no runtime overhead. There's also other features that the Grails annotation provides and
+the Spring one don't.
+
+The rule will check our code and if we use the Spring annotation it will add a new violation to the report.
