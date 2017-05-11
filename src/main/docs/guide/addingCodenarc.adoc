@@ -4,11 +4,11 @@ Adding CodeNarc to our project is a simple task because there's a https://docs.g
 Let's modify `build.gradle` and add the following:
 
 [source, groovy]
-./build.gradle
+./app/build.gradle
 ----
-include::{sourcedir}/build.gradle[tag=applyCodenarc]
+include::{sourcedir}/app/build.gradle[tag=applyCodenarc]
 
-include::{sourcedir}/build.gradle[tag=codenarcTask]
+include::{sourcedir}/app/build.gradle[tag=codenarcTask]
 ----
 
 <1> Apply the `codenarc` plugin.
@@ -126,9 +126,9 @@ Finally we can ignore a rule for a specific class. In this case we're going to i
 for `UrlMappings.groovy` using `@SuppressWarnings`:
 
 [source, groovy]
-./UrlMappings.groovy
+./app/grails-app/controllers/demo/UrlMappings.groovy
 ----
-include::{sourcedir}/grails-app/controllers/demo/UrlMappings.groovy[tag=urlMappings]
+include::{sourcedir}/app/grails-app/controllers/demo/UrlMappings.groovy[tag=urlMappings]
 ----
 
 
