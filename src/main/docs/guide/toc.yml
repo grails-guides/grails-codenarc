@@ -4,5 +4,12 @@ gettingStarted:
   howto: How to complete the guide
 writingTheApp:
   title: Writing the Application
-runningTheApp:
-  title: Running the Application
+  ruleTypes: Rule Types
+  addingCodenarc: Adding CodeNarc to our project
+  finalConfiguration: Final configuration
+writingCustomRule:
+  title: Writing a custom Rule
+  customRule: Creating the Rule
+  checkingRule: Checking the Rule in the Grails application
+helpWithGrails:
+  title: Do you need help with Grails?

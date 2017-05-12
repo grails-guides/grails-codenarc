@@ -1,0 +1,34 @@
+Once we have created the rule it's time to add it to the Grails application.
+
+First we add the dependency:
+
+[source, groovy]
+./app/build.gradle
+----
+include::{sourcedir}/app/build.gradle[tag=codenarcRule,indent=0]
+----
+
+Then enable the new rule:
+[source, groovy]
+./app/src/codenarc/rules.groovy
+----
+ruleset {
+    description 'Grails-CodeNarc Project RuleSet'
+
+    ...
+    ruleset('rulesets/grails-extra.xml')
+}
+
+----
+
+
+Now we can create a service and use Spring `@Transactional` on it:
+
+[source, groovy]
+./app/build.gradle
+----
+include::{sourcedir}/app/grails-app/services/demo/DemoService.groovy[]
+----
+
+And the final step is generating the CodeNarc report:
+
