@@ -19,10 +19,9 @@ apply plugin:"war"
 apply plugin:"org.grails.grails-web"
 apply plugin:"org.grails.grails-gsp"
 apply plugin:"asset-pipeline"
-
-// tag::applyCodenarc[]
-apply plugin: 'codenarc' // <1>
-// end::applyCodenarc[]
+// tag::applyFromCodenarc[]
+apply from: "${rootProject.projectDir}/gradle/codenarc.gradle"
+// end::applyFromCodenarc[]
 
 repositories {
     mavenLocal()
@@ -50,10 +49,6 @@ dependencies {
     testCompile "org.grails.plugins:geb"
     testRuntime "org.seleniumhq.selenium:selenium-htmlunit-driver:2.47.1"
     testRuntime "net.sourceforge.htmlunit:htmlunit:2.18"
-    // tag::codenarcRule[]
-    compile project(':codenarc-rule')
-//    compile 'codenarc:codenarc-rule:1.0.0-SNAPSHOT'
-    // end::codenarcRule[]
 }
 
 bootRun {
@@ -66,12 +61,3 @@ assets {
     minifyJs = true
     minifyCss = true
 }
-
-// tag::codenarcTask[]
-codenarc {
-    toolVersion = '0.27.0' // <2>
-    configFile = file("${projectDir}/src/codenarc/rules.groovy") // <3>
-    reportFormat = 'html' // <4>
-    ignoreFailures = true // <5>
-}
-// end::codenarcTask[]

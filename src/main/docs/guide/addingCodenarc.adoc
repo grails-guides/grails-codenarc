@@ -6,9 +6,15 @@ Let's modify `build.gradle` and add the following:
 [source, groovy]
 ./app/build.gradle
 ----
-include::{sourcedir}/app/build.gradle[tag=applyCodenarc]
+include::{sourcedir}/app/build.gradle[tag=applyFromCodenarc]
+----
 
-include::{sourcedir}/app/build.gradle[tag=codenarcTask]
+We encapsulate CodeNarcConfiguration in `gradle\codenarc.gradle
+
+[source, groovy]
+./gradle/codenarc.gradle
+----
+include::{sourcedir}/gradle/codenarc.gradle[]
 ----
 
 <1> Apply the `codenarc` plugin.
@@ -22,7 +28,7 @@ example, Jenkins we need to change it to `xml`.
 Then we need to create the rules file:
 
 [source, groovy]
-./app/src/codenarc/rules.groovy
+./config/codenarc/rules.groovy
 ----
 ruleset {
     description 'Grails-CodeNarc Project RuleSet'
