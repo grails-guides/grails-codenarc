@@ -9,5 +9,6 @@ writingTheApp:
   finalConfiguration: Final configuration
 writingCustomRule:
   title: Writing a custom Rule
+  customRule: Creating the Rule
 helpWithGrails:
   title: Do you need help with Grails?

@@ -5,5 +5,5 @@ repositories {
 }
 
 dependencies {
-    compile 'org.codenarc:CodeNarc:0.27.0'
+    compile 'org.codenarc:CodeNarc:0.27.0' // <1>
 }
