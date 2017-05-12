@@ -11,7 +11,7 @@ This allows having success builds with some violations but, once we reach those 
 To do that, just edit the `build.gradle` file:
 
 [source, groovy]
-./build.gradle
+./app/build.gradle
 ----
 codenarc {
     ...

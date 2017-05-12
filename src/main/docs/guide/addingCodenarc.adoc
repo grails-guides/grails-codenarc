@@ -22,7 +22,7 @@ example, Jenkins we need to change it to `xml`.
 Then we need to create the rules file:
 
 [source, groovy]
-./rules.groovy
+./app/src/codenarc/rules.groovy
 ----
 ruleset {
     description 'Grails-CodeNarc Project RuleSet'
@@ -47,12 +47,11 @@ With this configuration we can just run the `check` task.
 
 [source, bash]
 ----
-$ ./gradlew check
-Using gradle at '/home/ivan/oci/guides/grails-codenarc/gradlew' to run buildfile '/home/ivan/oci/guides/grails-codenarc/build.gradle':
+$ ./gradlew :app:check
 
 :check UP-TO-DATE
 :complete:codenarcMain
-CodeNarc rule violations were found. See the report at: file:///home/ivan/oci/guides/grails-codenarc/complete/build/reports/codenarc/main.html
+CodeNarc rule violations were found. See the report at: file:///home/ivan/workspaces/oci/guides/grails-codenarc/complete/app/build/reports/codenarc/main.html
 :complete:codenarcTest NO-SOURCE
 :complete:compileJava NO-SOURCE
 :complete:compileGroovy UP-TO-DATE
@@ -64,7 +63,7 @@ CodeNarc rule violations were found. See the report at: file:///home/ivan/oci/gu
 :complete:processTestResources NO-SOURCE
 :complete:testClasses UP-TO-DATE
 :complete:test NO-SOURCE
-:complete:checkU
+:complete:check
 
 Total time: 1.953 secs
 ----
@@ -99,7 +98,7 @@ of the `UrlMappings.groovy` file and a space before the braces.
 For the case of `ClassJavadoc` and `NoDef` we can just disable the rules modifying the `rules.groovy` file:
 
 [source, groovy]
-./rules.groovy
+./app/src/codenarc/rules.groovy
 ----
 ruleset {
     description 'Grails-CodeNarc Project RuleSet'
