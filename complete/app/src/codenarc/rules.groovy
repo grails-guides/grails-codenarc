@@ -22,4 +22,5 @@ ruleset {
     ruleset('rulesets/unnecessary.xml')
     ruleset('rulesets/unused.xml')
     ruleset('rulesets/grails.xml')
+    ruleset('rulesets/grails-extra.xml')
 }
