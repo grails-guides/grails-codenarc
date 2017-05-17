@@ -65,7 +65,7 @@ class GrailsTransactionalRuleTest extends AbstractRuleTestCase { // <1>
     }
 
     @Test
-    void testSpringTransactionalIsNotOnClassAllowedWithImport() {
+    void testSpringTransactionalIsNotAllowedOnClassWithImport() {
         final SOURCE = '''
             import org.springframework.transaction.annotation.Transactional
 
@@ -82,7 +82,7 @@ class GrailsTransactionalRuleTest extends AbstractRuleTestCase { // <1>
     }
 
     @Test
-    void testSpringTransactionalIsAllowedOnClassWithFullpackageAnnotation() {
+    void testSpringTransactionalIsNotAllowedOnClassWithFullpackageAnnotation() {
         final SOURCE = '''
             @org.springframework.transaction.annotation.Transactional
             class TestService {
@@ -96,7 +96,7 @@ class GrailsTransactionalRuleTest extends AbstractRuleTestCase { // <1>
     }
 
     @Test
-    void testSpringTransactionalIsNotOnMethodAllowedWithImport() {
+    void testSpringTransactionalIsNotAllowedOnMethodWithImport() {
         final SOURCE = '''
             import org.springframework.transaction.annotation.Transactional
 
@@ -114,7 +114,7 @@ class GrailsTransactionalRuleTest extends AbstractRuleTestCase { // <1>
     }
 
     @Test
-    void testSpringTransactionalIsAllowedOnMethodWithFullpackageAnnotation() {
+    void testSpringTransactionalIsNotAllowedOnMethodWithFullpackageAnnotation() {
         final SOURCE = '''
             class TestService {
                 @org.springframework.transaction.annotation.Transactional
