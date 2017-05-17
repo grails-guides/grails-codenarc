@@ -10,6 +10,19 @@ include::{sourcedir}/codenarc-rule/build.gradle[]
 ----
 <1> Only need CodeNarc dependency
 
+In order to be able to user this new CodeNarc rule in our Grails application we need to make sure that the jar file
+is available in the classpath during the `codenarcMain` taks:
+
+[source, groovy]
+./gradle/codenarc.gradle
+----
+include::{sourcedir}/gradle/codenarc.gradle[tag=codeNarcClasspath]
+----
+<1> `codenarcMain` depends on the jar being generated
+<2> Add the jar to the `codenarcClasspath`
+
+TIP: If you want to use CodeNarc to also check your tests code you need to do the same for the `codenarcTest` task.
+
 
 ==== Define the rule
 
@@ -24,7 +37,8 @@ include::{sourcedir}/codenarc-rule/src/main/resources/rulesets/grails-extra.xml[
 <2> One `rule` element per rule we create.
 
 
-Second we create a properties file with the description of the rule. This message will be used in the html report:
+Second we create a properties file with the description of the rule in both plain text and html. The messages will be
+used in the html report:
 
 [source, xml]
 ./codenarc-rule/src/main/resources/codenarc-messages.properties

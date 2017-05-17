@@ -9,19 +9,19 @@ Let's modify `build.gradle` and add the following:
 include::{sourcedir}/app/build.gradle[tag=applyFromCodenarc]
 ----
 
-We encapsulate CodeNarcConfiguration in `gradle\codenarc.gradle
+We encapsulate all the CodeNarc configuration in `gradle/codenarc.gradle`:
 
 [source, groovy]
 ./gradle/codenarc.gradle
 ----
-include::{sourcedir}/gradle/codenarc.gradle[]
+include::{sourcedir}/gradle/codenarc.gradle[tag=configureCodeNarc]
 ----
 
 <1> Apply the `codenarc` plugin.
 <2> Set the CodeNarc version we want to use.
 <3> Define the main file with the rules. By default CodeNarc uses `config/codenarc/codenarc.xml` but we don't want to
 write XML files, don't we?
-<4> The report format we want. For a human-ready format we use `html`. If we want to integrate CodeNarc with, for
+<4> The report format we want. For a human-readable format we use `html`. If we want to integrate CodeNarc with, for
 example, Jenkins we need to change it to `xml`.
 <5> Because we don't want that the build fails when there's only one violation.
 

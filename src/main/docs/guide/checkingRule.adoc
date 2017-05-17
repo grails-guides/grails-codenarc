@@ -1,14 +1,5 @@
-Once we have created the rule it's time to add it to the Grails application.
+Once we have created the rule and it's available on the classpath it's time to add it to the Grails application.
 
-First we add the dependency:
-
-[source, groovy]
-./app/build.gradle
-----
-include::{sourcedir}/app/build.gradle[tag=codenarcRule,indent=0]
-----
-
-Then enable the new rule:
 [source, groovy]
 ./app/src/codenarc/rules.groovy
 ----
@@ -32,3 +23,6 @@ include::{sourcedir}/app/grails-app/services/demo/DemoService.groovy[]
 
 And the final step is generating the CodeNarc report:
 
+image::report3.png[]
+
+As we can see we have a new violation because the rule we created as been applied.
