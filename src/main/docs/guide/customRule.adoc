@@ -18,11 +18,8 @@ is available in the classpath during the `codenarcMain` taks:
 ----
 include::{sourcedir}/gradle/codenarc.gradle[tag=codeNarcClasspath]
 ----
-<1> `codenarcMain` depends on the jar being generated
+<1> CodeNarc tasks depend on the jar being generated
 <2> Add the jar to the `codenarcClasspath`
-
-TIP: If you want to use CodeNarc to also check your tests code you need to do the same for the `codenarcTest` task.
-
 
 ==== Define the rule
 
@@ -40,7 +37,7 @@ include::{sourcedir}/codenarc-rule/src/main/resources/rulesets/grails-extra.xml[
 Second we create a properties file with the description of the rule in both plain text and html. The messages will be
 used in the html report:
 
-[source, xml]
+[source, properties]
 ./codenarc-rule/src/main/resources/codenarc-messages.properties
 ----
 include::{sourcedir}/codenarc-rule/src/main/resources/codenarc-messages.properties[]
