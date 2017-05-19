@@ -19,7 +19,7 @@ class GrailsTransactionalRule extends AbstractAstVisitorRule { // <1>
 class GrailsTransactionalVisitor extends AbstractAstVisitor { // <5>
 
     private static final String SPRING_TRANSACTIONAL = 'org.springframework.transaction.annotation.Transactional'
-    private static final String ERROR_MSG = 'Do not use Spring @Transactional, use @grails.transacion.Transactional instead'
+    private static final String ERROR_MSG = 'Do not use Spring @Transactional, use @grails.gorm.transactions.Transactional instead'
 
     @Override
     void visitAnnotations(AnnotatedNode node) { // <6>

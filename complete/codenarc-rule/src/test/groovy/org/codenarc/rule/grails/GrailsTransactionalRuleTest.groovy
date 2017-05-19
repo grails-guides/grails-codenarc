@@ -15,7 +15,7 @@ class GrailsTransactionalRuleTest extends AbstractRuleTestCase { // <1>
     @Test
     void testGrailsTransactionalIsAllowedOnClassWithImport() {
         final SOURCE = ''' // <3> 
-            import grails.transaction.Transactional
+            import grails.gorm.transactions.Transactional
 
             @Transactional
             class TestService {
@@ -28,7 +28,7 @@ class GrailsTransactionalRuleTest extends AbstractRuleTestCase { // <1>
     @Test
     void testGrailsTransactionalIsAllowedOnClassWithFullpackageAnnotation() {
         final SOURCE = '''
-            @grails.transaction.Transactional
+            @grails.gorm.transactions.Transactional
             class TestService {
             }
         '''
@@ -39,7 +39,7 @@ class GrailsTransactionalRuleTest extends AbstractRuleTestCase { // <1>
     @Test
     void testGrailsTransactionalIsAllowedOnMethodWithImport() {
         final SOURCE = '''
-            import grails.transaction.Transactional
+            import grails.gorm.transactions.Transactional
 
             class TestService {
                 @Transactional
@@ -55,7 +55,7 @@ class GrailsTransactionalRuleTest extends AbstractRuleTestCase { // <1>
     void testGrailsTransactionalIsAllowedOnMethodWithFullpackageAnnotation() {
         final SOURCE = '''
             class TestService {
-                @grails.transaction.Transactional
+                @grails.gorm.transactions.Transactional
                 void foo() {
                 }
             }
