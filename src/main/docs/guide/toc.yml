@@ -1,9 +1,10 @@
-gettingStarted: 
+gettingStarted:
   title: Getting Started
   requirements: What you will need
   howto: How to complete the guide
 writingTheApp:
   title: Writing the Application
+  multiproject: Multi-Project Build
   ruleTypes: Rule Types
   addingCodenarc: Adding CodeNarc to our project
   finalConfiguration: Final configuration

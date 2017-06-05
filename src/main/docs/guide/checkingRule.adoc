@@ -1,4 +1,4 @@
-Once we have created the rule and it's available on the classpath it's time to add it to the Grails application.
+Once we have created the rule and it's available on the classpath, it's time to add it to the Grails application.
 
 [source, groovy]
 ./app/src/codenarc/rules.groovy

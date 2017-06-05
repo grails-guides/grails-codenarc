@@ -3,8 +3,7 @@ in 22 categories:
 
 - **Basic**: For example to check that there are no empty `else` or `finally` blocks.
 - **Braces**: How many times have you seen an `if` or `else` with only one statement without the curly-braces? I personally
-don't like this because it's a source of bugs in the future. We can add the rules in this category to perform these
-checks.
+don't like code without curly-braces because it's a source of bugs in the future. We can add the rules in this category to perform these checks.
 - **Convention**: There are rules to check for some conventions: when we write an "inverted" `if`, an `if` that can be
 converted to an elvis operator,...
 - **Exceptions**: Rules that will fail if, for example, we throw a `NullPointerException`.
