@@ -1,1 +1,3 @@
 rootProject.name='grails-codenarc'
+include 'app'
+include 'codenarc-rule'
