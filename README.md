@@ -1,9 +1,11 @@
-# Grails CodeNarc
+# Static code analysis in a Grails app with CodeNarc
 
-A [Guide](https://guides.grails.org/grails-codenarc/guide/index.html) to use CodeNarc in Grails 3 applications and to create custom rules
+This repository contains the worked sample app for the [Static code analysis in a Grails app with CodeNarc](https://grails.apache.org/guides/grails-codenarc/4/guide/index.html) guide on the Apache Grails site.
 
-To generate the guide execute: 
+## Run the example
 
-```
-./gradlew publishGuide
-```
+`./gradlew bootRun`
+
+## Maintained at apache/grails-static-website
+
+The guide narrative is maintained at https://github.com/apache/grails-static-website. Changes to the guide content go there; this repo holds the worked sample app only.
